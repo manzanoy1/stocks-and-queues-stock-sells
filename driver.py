@@ -7,17 +7,17 @@ from queue_code import *
 
 def test_shift():
     colors = Queue()
-    colors.shift("Hotdog")
+    colors.shift("Apple")
     assert colors.count() == 1
     colors.shift("Banana")
     assert colors.count() == 2
 
 def test_unshift():
     colors = Queue()
-    colors.shift("Rose")
-    colors.shift("Violet")
-    assert colors.unshift() == "Rose"
-    assert colors.unshift() == "Violet"
+    colors.shift("Blue")
+    colors.shift("Black")
+    assert colors.unshift() == "Blue"
+    assert colors.unshift() == "Black"
     assert colors.unshift() == None
 
 def test_first():
@@ -26,8 +26,8 @@ def test_first():
     assert colors.first() == "Couch"
     colors.shift("Table")
     assert colors.first() == "Table"
-    colors.shift("Desk")
-    assert colors.first() == "Desk"
+    colors.shift("Chair")
+    assert colors.first() == "Chair"
 
 def test_drop():
     colors = Queue()
